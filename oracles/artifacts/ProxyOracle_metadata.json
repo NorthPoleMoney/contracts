@@ -1,0 +1,374 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "contract IOracle",
+						"name": "oldOracle",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "contract IOracle",
+						"name": "newOracle",
+						"type": "address"
+					}
+				],
+				"name": "LogOracleImplementationChange",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "newOracle",
+						"type": "address"
+					}
+				],
+				"name": "changeOracleImplementation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "claimOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "oracleImplementation",
+				"outputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "peek",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "peekSpot",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "rate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pendingOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "direct",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "renounce",
+						"type": "bool"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"get(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "success if no valid (recent) rate is available, return false else true.",
+						"_1": "rate The rate of the requested asset / pair / pool."
+					}
+				},
+				"name(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "(string) A human readable name about this oracle."
+					}
+				},
+				"peek(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "success if no valid (recent) rate is available, return false else true.",
+						"_1": "rate The rate of the requested asset / pair / pool."
+					}
+				},
+				"peekSpot(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"rate": "The rate of the requested asset / pair / pool."
+					}
+				},
+				"symbol(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "(string) A human readable symbol name about this oracle."
+					}
+				},
+				"transferOwnership(address,bool,bool)": {
+					"params": {
+						"direct": "True if `newOwner` should be set immediately. False if `newOwner` needs to use `claimOwnership`.",
+						"newOwner": "Address of the new owner.",
+						"renounce": "Allows the `newOwner` to be `address(0)` if `direct` and `renounce` is True. Has no effect otherwise."
+					}
+				}
+			},
+			"title": "ProxyOracle",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"claimOwnership()": {
+					"notice": "Needs to be called by `pendingOwner` to claim ownership."
+				},
+				"get(bytes)": {
+					"notice": "Get the latest exchange rate."
+				},
+				"name(bytes)": {
+					"notice": "Returns a human readable name about this oracle."
+				},
+				"peek(bytes)": {
+					"notice": "Check the last exchange rate without any state changes."
+				},
+				"peekSpot(bytes)": {
+					"notice": "Check the current spot exchange rate without any state changes. For oracles like TWAP this will be different from peek()."
+				},
+				"symbol(bytes)": {
+					"notice": "Returns a human readable (short) name about this oracle."
+				},
+				"transferOwnership(address,bool,bool)": {
+					"notice": "Transfers ownership to `newOwner`. Either directly or claimable by the new pending owner. Can only be invoked by the current `owner`."
+				}
+			},
+			"notice": "Oracle used for getting the price of xSUSHI based on Chainlink",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/oracles/ProxyOracle.sol": "ProxyOracle"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@boringcrypto/boring-solidity/contracts/BoringOwnable.sol": {
+			"keccak256": "0xbde1619421fef865bf5f5f806e319900fb862e27f0aef6e0878e93f04f477601",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://76fb6488d9329f078b67ab61296a0cc0672f1669f2e3b776b3418b89dccc7f26",
+				"dweb:/ipfs/QmeNCQZRWZQktYeePHEfRmiuAg3JfpCTgKkJruddSRh3eD"
+			]
+		},
+		"@boringcrypto/boring-solidity/contracts/interfaces/IERC20.sol": {
+			"keccak256": "0xf0da35541d6ae9e3c12fdd7c8d5d9584c56f9ac50d062efb8ca353ebd6ffd47d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8670101b72310d2c5e9b3e216e15ccb46de879acb9d3e2260952f331dad86301",
+				"dweb:/ipfs/QmPzbTvPqhjo2bqxyoDasCBPtGUK41BrWvf5BJ5UmiUgAd"
+			]
+		},
+		"contracts/interfaces/IOracle.sol": {
+			"keccak256": "0x558a9784fc707121492ac785a12d99b4af8d00d87bee215eeb9e40be874090f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://10356ccff8d1e1078d352d671c77f55e96bb3453609d5d976f7fded9f06a0923",
+				"dweb:/ipfs/QmaSaK6WhUeGfkETgkZXz996GDX3iypfZ9XbivX8BUkV7M"
+			]
+		},
+		"contracts/oracles/ProxyOracle.sol": {
+			"keccak256": "0xb24ad9cc724bd95556e8faf2bbccd4e86178a13d60d6d3f15fa0bd566a41eff6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://33bf4fc94546d764c191f23c6c0f1890c247942066380074460f218c43e3c7dd",
+				"dweb:/ipfs/QmecttqnyPwdAmkvcW6yzeguDsry3qCRkT9E42qR5Lkntk"
+			]
+		}
+	},
+	"version": 1
+}

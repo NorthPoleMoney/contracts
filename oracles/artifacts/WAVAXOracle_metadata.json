@@ -1,0 +1,239 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AVAX_USD",
+				"outputs": [
+					{
+						"internalType": "contract IAggregator",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "peek",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "peekSpot",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "rate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"get(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "success if no valid (recent) rate is available, return false else true.",
+						"_1": "rate The rate of the requested asset / pair / pool."
+					}
+				},
+				"name(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "(string) A human readable name about this oracle."
+					}
+				},
+				"peek(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "success if no valid (recent) rate is available, return false else true.",
+						"_1": "rate The rate of the requested asset / pair / pool."
+					}
+				},
+				"peekSpot(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"rate": "The rate of the requested asset / pair / pool."
+					}
+				},
+				"symbol(bytes)": {
+					"params": {
+						"data": "Usually abi encoded, implementation specific data that contains information and arguments to & about the oracle. For example: (string memory collateralSymbol, string memory assetSymbol, uint256 division) = abi.decode(data, (string, string, uint256));"
+					},
+					"returns": {
+						"_0": "(string) A human readable symbol name about this oracle."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"get(bytes)": {
+					"notice": "Get the latest exchange rate."
+				},
+				"name(bytes)": {
+					"notice": "Returns a human readable name about this oracle."
+				},
+				"peek(bytes)": {
+					"notice": "Check the last exchange rate without any state changes."
+				},
+				"peekSpot(bytes)": {
+					"notice": "Check the current spot exchange rate without any state changes. For oracles like TWAP this will be different from peek()."
+				},
+				"symbol(bytes)": {
+					"notice": "Returns a human readable (short) name about this oracle."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/oracles/WAVAXOracle.sol": "WAVAXOracle"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@boringcrypto/boring-solidity/contracts/libraries/BoringMath.sol": {
+			"keccak256": "0x6bc52950e23c70a90a5b039697b77ba76360b62da6a06a61d3a1714b9c6c26b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://507b01278ba8ce200337e21122c8912c39b7a583d821fde847f47e36fd26c598",
+				"dweb:/ipfs/Qmcm7G94MBdSPm7fS743fV86yMX2kMeE3a9QXjTpTAj6zW"
+			]
+		},
+		"contracts/interfaces/IOracle.sol": {
+			"keccak256": "0x558a9784fc707121492ac785a12d99b4af8d00d87bee215eeb9e40be874090f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://10356ccff8d1e1078d352d671c77f55e96bb3453609d5d976f7fded9f06a0923",
+				"dweb:/ipfs/QmaSaK6WhUeGfkETgkZXz996GDX3iypfZ9XbivX8BUkV7M"
+			]
+		},
+		"contracts/oracles/WAVAXOracle.sol": {
+			"keccak256": "0x404575d9cae57e1e34d0342c2cd3becae67b3ef514337a38f5ee32f824088f21",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://15195de12f3dc3000e247dff658293bb86e0bd92c3fd77865fc685d65232a39e",
+				"dweb:/ipfs/QmRhfoBemztXfih4wKY6pqz8dUAnkjzFdGRNv476wAjfwA"
+			]
+		}
+	},
+	"version": 1
+}

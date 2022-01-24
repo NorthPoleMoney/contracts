@@ -1,0 +1,113 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "GLAZETowGLZAE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/oracles/WGLAZEOracle.sol": "IWGLAZE"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@boringcrypto/boring-solidity/contracts/libraries/BoringMath.sol": {
+			"keccak256": "0x6bc52950e23c70a90a5b039697b77ba76360b62da6a06a61d3a1714b9c6c26b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://507b01278ba8ce200337e21122c8912c39b7a583d821fde847f47e36fd26c598",
+				"dweb:/ipfs/Qmcm7G94MBdSPm7fS743fV86yMX2kMeE3a9QXjTpTAj6zW"
+			]
+		},
+		"@sushiswap/core/contracts/uniswapv2/interfaces/IUniswapV2Factory.sol": {
+			"keccak256": "0xcaec675e6250bf4cd3364459a0cbf789262af2aaa377d61d4d463f657aea7b50",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2c09e004aa8654e1ad2a1e9d8500883f618d754e5a77c840e2c9064c7a80b5cb",
+				"dweb:/ipfs/QmamoA2xnZpLsu4gjNaWkfdYcL5VjRpFmR5shpoJ8wYjZw"
+			]
+		},
+		"@sushiswap/core/contracts/uniswapv2/interfaces/IUniswapV2Pair.sol": {
+			"keccak256": "0x08f9a63b34855eec941be8d36a04424f1a1725a2c030373fcef3afeb480ca385",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://174219f9a6c90b4d0133475da5333403aea21ba49d303f3ba28cb4e9a2a0141e",
+				"dweb:/ipfs/QmdDy25xsAfWxaKnRbGJys7d9BaPhpbGorMQCY4Au2auZL"
+			]
+		},
+		"contracts/interfaces/IOracle.sol": {
+			"keccak256": "0x558a9784fc707121492ac785a12d99b4af8d00d87bee215eeb9e40be874090f3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://10356ccff8d1e1078d352d671c77f55e96bb3453609d5d976f7fded9f06a0923",
+				"dweb:/ipfs/QmaSaK6WhUeGfkETgkZXz996GDX3iypfZ9XbivX8BUkV7M"
+			]
+		},
+		"contracts/libraries/FixedPoint.sol": {
+			"keccak256": "0x2907da9fd905462ae5cd6ab07f46ec0527d29b845d2ca1f0279fc73e53710923",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://1df221ba52849bdf4908ec983d68567645109f1e3676f8f32a5e3c326595c8c0",
+				"dweb:/ipfs/QmYbyjJPEh7zr6iLWTQZCrqhpBNyCDxBUWWYTbVf6KGHQj"
+			]
+		},
+		"contracts/libraries/FullMath.sol": {
+			"keccak256": "0xfaac2090835dd2a77c6da1ed2de0baa8c18d6cda3c1c8096668dc9fb885cdb47",
+			"license": "CC-BY-4.0",
+			"urls": [
+				"bzz-raw://7b9eb5fde26c44217115c8b12a83eef94e266e4085fbfb21024ff0f0de349620",
+				"dweb:/ipfs/QmXTUTTAbNmkixLMBKnES55BwTFKQC26rLai8Usj6MENMn"
+			]
+		},
+		"contracts/oracles/WGLAZEOracle.sol": {
+			"keccak256": "0xa5a73a4d717bdf385e1946ea61d6b49e3b51e2b71fed4ad33cee6c8f4e41de6d",
+			"license": "AGPL-3.0-only",
+			"urls": [
+				"bzz-raw://0f14a67ea218066b9328dfff0051e238fd0b582165ac1979fd1e4d0021b63a22",
+				"dweb:/ipfs/QmZdji8pMyXfs5JWRFia33nbi9MwMB4AMHiXnuHUaAAs6s"
+			]
+		}
+	},
+	"version": 1
+}
